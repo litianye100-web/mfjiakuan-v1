@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇦 SA 01 - xiaohe
+- name: 🇰🇿 KZ 01 - xiaohe
   type: vless
-  server: 91.209.253.42
+  server: kz3.zuoai.cf
   port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: nb.lovecf.ggff.net
+  servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
     path: /proxyip=us.xiabibi.cf
     headers:
-      Host: nb.lovecf.ggff.net
+      Host: xi.tbv.ccwu.cc
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇦 SA 01 - xiaohe
+  - 🇰🇿 KZ 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇦 SA 01 - xiaohe
+  - 🇰🇿 KZ 01 - xiaohe
 rules:
 - MATCH,PROXIES

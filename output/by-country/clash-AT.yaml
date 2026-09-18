@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇩🇪 德国 (Germany) 01 (家宽) - xiaohe
+- name: 🇦🇹 AT 01 - xiaohe
   type: vless
   server: 132.243.203.207
   port: 8443
@@ -18,17 +18,26 @@ proxies:
     path: /lives?ed=2560fp=chrome
     headers:
       Host: cdn8848.776676.xyz
+- name: 🇦🇹 AT 02 - xiaohe
+  type: ss
+  server: 82.110.60.9
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇩🇪 德国 (Germany) 01 (家宽) - xiaohe
+  - 🇦🇹 AT 01 - xiaohe
+  - 🇦🇹 AT 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇩🇪 德国 (Germany) 01 (家宽) - xiaohe
+  - 🇦🇹 AT 01 - xiaohe
+  - 🇦🇹 AT 02 - xiaohe
 rules:
 - MATCH,PROXIES

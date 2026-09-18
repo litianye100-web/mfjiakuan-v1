@@ -4,47 +4,47 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇸🇮 SI 01 - xiaohe
+- name: 🇰🇿 KZ 01 - xiaohe
   type: vless
-  server: 92.53.191.123
+  server: 31.43.179.36
   port: 443
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: notls.lukongtou.eu.org
+  servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: notls.lukongtou.eu.org
-- name: 🇸🇮 SI 02 - xiaohe
+      Host: xi.tbv.ccwu.cc
+- name: 🇰🇿 KZ 02 - xiaohe
   type: vless
-  server: 92.60.74.123
+  server: 31.43.179.25
   port: 443
-  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
+  uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: notls.lukongtou.eu.org
+  servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
-    path: /
+    path: /proxyip=us.xiabibi.cf
     headers:
-      Host: notls.lukongtou.eu.org
+      Host: xi.tbv.ccwu.cc
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇸🇮 SI 01 - xiaohe
-  - 🇸🇮 SI 02 - xiaohe
+  - 🇰🇿 KZ 01 - xiaohe
+  - 🇰🇿 KZ 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇸🇮 SI 01 - xiaohe
-  - 🇸🇮 SI 02 - xiaohe
+  - 🇰🇿 KZ 01 - xiaohe
+  - 🇰🇿 KZ 02 - xiaohe
 rules:
 - MATCH,PROXIES

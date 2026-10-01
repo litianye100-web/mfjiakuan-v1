@@ -4,31 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇰🇿 KZ 01 - xiaohe
+- name: 🇨🇱 CL 01 - xiaohe
   type: vless
-  server: 89.218.15.90
-  port: 10002
-  uuid: 392fcc7e-b995-11f1-a6b7-1b2272a86bd5
+  server: 34.176.187.219
+  port: 443
+  uuid: ad5325f8-f0b3-41c4-a561-113529b60e70
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: kz1.vpnjantit.com
-  network: ws
-  ws-opts:
-    path: /vpnjantit
-    headers:
-      Host: kz1.vpnjantit.com
+  reality-opts:
+    public-key: HnHVuSObMrldWGzq1-Eb93fwgu6QQRp6H0_8LX3ikDc
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇰🇿 KZ 01 - xiaohe
+  - 🇨🇱 CL 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇰🇿 KZ 01 - xiaohe
+  - 🇨🇱 CL 01 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -15,7 +15,7 @@ proxies:
   reality-opts:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: firefox
 - name: 🇮🇳 印度 (India) 02 - xiaohe
   type: ss
   server: 172.105.39.124
@@ -46,7 +46,7 @@ proxies:
   reality-opts:
     public-key: PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 - name: 🇮🇳 印度 (India) 05 - xiaohe
   type: vless
   server: 194.61.31.126

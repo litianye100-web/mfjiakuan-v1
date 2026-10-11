@@ -1,0 +1,32 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇮🇷 IR 01 - xiaohe
+  type: vless
+  server: best.valaiqm.ir
+  port: 3030
+  uuid: a1fb63f7-a942-4010-a830-bc395703a9a4
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 7sQ48HLZKlTXobpwnmr28_esiMRwzjS3DppR9yC3i1U
+  servername: telewebion.ir
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇮🇷 IR 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇮🇷 IR 01 - xiaohe
+rules:
+- MATCH,PROXIES

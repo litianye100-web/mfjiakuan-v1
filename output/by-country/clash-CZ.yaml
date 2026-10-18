@@ -5,20 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 CZ 01 - xiaohe
-  type: ss
-  server: 67.159.18.34
-  port: 17001
-  cipher: aes-256-gcm
-  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
-  udp: true
-- name: 🇨🇿 CZ 02 - xiaohe
-  type: ss
-  server: 67.159.18.34
-  port: 17001
-  cipher: aes-256-gcm
-  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
-  udp: true
-- name: 🇨🇿 CZ 03 - xiaohe
   type: vless
   server: cl-glb6e059ee.gcdn.co
   port: 443
@@ -32,6 +18,20 @@ proxies:
     path: /qVnRkTxmLwBzHjYpFaDgUcSeNrKxMtVbWqZhPcLsJfGy
     headers:
       Host: node-3.wt419.site
+- name: 🇨🇿 CZ 02 - xiaohe
+  type: ss
+  server: 67.159.18.34
+  port: 17001
+  cipher: aes-256-gcm
+  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+  udp: true
+- name: 🇨🇿 CZ 03 - xiaohe
+  type: ss
+  server: 67.159.18.34
+  port: 17001
+  cipher: aes-256-gcm
+  password: I6o9NnialYLMEjVt28RF4dpjmr9wMvNL
+  udp: true
 - name: 🇨🇿 CZ 04 - xiaohe
   type: vless
   server: 81.28.12.12

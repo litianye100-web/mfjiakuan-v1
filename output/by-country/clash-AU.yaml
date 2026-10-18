@@ -5,38 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
-  type: vmess
-  server: 172.67.195.146
-  port: 443
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: aus.lovehk.xyz
-  network: ws
-  ws-opts:
-    path: /Sydney3
-    headers:
-      Host: aus.lovehk.xyz
-- name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
-  type: vmess
-  server: 172.67.195.146
-  port: 443
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: aus.lovehk.xyz
-  network: ws
-  ws-opts:
-    path: /Sydney3
-    headers:
-      Host: aus.lovehk.xyz
-- name: 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
   type: vless
   server: 212.81.47.99
   port: 51106
@@ -48,20 +16,50 @@ proxies:
     public-key: 2k8UhfxEK4WSVLWUr-uRExRiTiAsacWpe6I1xrnyt38
   servername: apple.com
   client-fingerprint: chrome
-- name: 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
+- name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
   type: vless
-  server: 104.18.155.229
-  port: 443
-  uuid: 42026ed0-7d74-4585-8e46-0fe6aa4d665a
+  server: 212.81.47.99
+  port: 51106
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: www.genflix.co.id.r3xxe.eu.cc
+  reality-opts:
+    public-key: 2k8UhfxEK4WSVLWUr-uRExRiTiAsacWpe6I1xrnyt38
+  servername: apple.com
+  client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
+  type: vmess
+  server: 172.67.195.146
+  port: 443
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: aus.lovehk.xyz
   network: ws
   ws-opts:
-    path: /au-do
+    path: /Sydney3
     headers:
-      Host: www.genflix.co.id.r3xxe.eu.cc
+      Host: aus.lovehk.xyz
+- name: 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
+  type: vmess
+  server: 172.67.195.146
+  port: 443
+  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: aus.lovehk.xyz
+  network: ws
+  ws-opts:
+    path: /Sydney3
+    headers:
+      Host: aus.lovehk.xyz
 proxy-groups:
 - name: PROXIES
   type: select

@@ -6,6 +6,20 @@ log-level: info
 proxies:
 - name: 🇮🇷 IR 01 - xiaohe
   type: vless
+  server: tun.centeriran.shop
+  port: 443
+  uuid: 041b2265-0d0a-4290-9439-25b6a0e15b6e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 2sdfsxc.centeriran.shop
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: tun.centeriran.shop
+- name: 🇮🇷 IR 02 - xiaohe
+  type: vless
   server: irnamh.g44mozgh.ir
   port: 2035
   uuid: 65c91ab7-a503-4b73-9f8e-e1c0b6377dc2
@@ -22,11 +36,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
 rules:
 - MATCH,PROXIES

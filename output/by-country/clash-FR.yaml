@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - xiaohe
+  type: vless
+  server: 51.44.38.228
+  port: 22224
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 02 - xiaohe
   type: vmess
   server: 57.128.164.21
   port: 80
@@ -19,14 +27,6 @@ proxies:
     path: /d3d3LmlyYW5ob3N0LmNvbQ==?ed=2560
     headers:
       Host: https.http.www.net.com.ramseyv2.ir.
-- name: 🇫🇷 法国 (France) 02 - xiaohe
-  type: vless
-  server: 35.180.76.81
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
 - name: 🇫🇷 法国 (France) 03 - xiaohe
   type: vless
   server: 51.44.38.228
@@ -36,14 +36,6 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: 🇫🇷 法国 (France) 04 - xiaohe
-  type: vless
-  server: 13.37.140.13
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 05 - xiaohe
   type: vmess
   server: 54.37.131.126
   port: 80
@@ -58,7 +50,7 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-- name: 🇫🇷 法国 (France) 06 - xiaohe
+- name: 🇫🇷 法国 (France) 05 - xiaohe
   type: vmess
   server: 162.19.204.71
   port: 1234
@@ -69,6 +61,14 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: ''
+- name: 🇫🇷 法国 (France) 06 - xiaohe
+  type: vless
+  server: 51.44.38.228
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  udp: true
+  tls: false
+  skip-cert-verify: true
 - name: 🇫🇷 法国 (France) 07 - xiaohe
   type: vmess
   server: 145.239.55.210

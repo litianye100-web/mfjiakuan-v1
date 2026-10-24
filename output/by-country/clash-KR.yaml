@@ -15,32 +15,15 @@ proxies:
   reality-opts:
     public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
   servername: www.cloudflare.com
-  client-fingerprint: random
+  client-fingerprint: firefox
 - name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
-  type: vless
-  server: 151.245.106.49
-  port: 2053
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  type: ss
+  server: 54.180.151.244
+  port: 8443
+  cipher: chacha20-ietf-poly1305
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
-  servername: www.cloudflare.com
-  client-fingerprint: random
 - name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  type: vless
-  server: 151.245.106.49
-  port: 2053
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
   type: vmess
   server: 132.145.80.230
   port: 80
@@ -54,8 +37,8 @@ proxies:
   ws-opts:
     path: /cctv13.m3u8
     headers:
-      Host: 132.145.80.230
-- name: 🇰🇷 韩国 (South Korea) 05 - xiaohe
+      Host: kr02.a0a.xyz
+- name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
   type: vless
   server: 151.245.106.49
   port: 2053
@@ -66,7 +49,47 @@ proxies:
   reality-opts:
     public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 05 - xiaohe
+  type: vmess
+  server: seoul02.zgjok.com
+  port: 443
+  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ''
+  network: ws
+  ws-opts:
+    path: ''
+    headers:
+      Host: ''
+- name: 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  type: vless
+  server: 151.245.106.49
+  port: 2053
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+  servername: www.cloudflare.com
+  client-fingerprint: random
+- name: 🇰🇷 韩国 (South Korea) 07 - xiaohe
+  type: vless
+  server: 151.245.106.49
+  port: 2053
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+  servername: www.cloudflare.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -77,6 +100,8 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 03 - xiaohe
   - 🇰🇷 韩国 (South Korea) 04 - xiaohe
   - 🇰🇷 韩国 (South Korea) 05 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -87,5 +112,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 03 - xiaohe
   - 🇰🇷 韩国 (South Korea) 04 - xiaohe
   - 🇰🇷 韩国 (South Korea) 05 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 07 - xiaohe
 rules:
 - MATCH,PROXIES

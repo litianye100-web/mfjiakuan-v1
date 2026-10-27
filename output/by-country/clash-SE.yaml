@@ -19,31 +19,19 @@ proxies:
       Host: 5.178.109.174
 - name: 🇸🇪 SE 02 - xiaohe
   type: vless
-  server: 5.129.234.167
-  port: 12213
-  uuid: 7c464358-6c89-4623-bd20-7c7bcd51bc55
+  server: 191.44.114.179
+  port: 2096
+  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: kTKM-s7XF0s878Ydmq1KeZFiGT6k1Bw_rLE79s1l1jI
-  servername: music.yandex.ru
-  client-fingerprint: ''
-- name: 🇸🇪 SE 03 - xiaohe
-  type: vless
-  server: 89.22.224.146
-  port: 43788
-  uuid: 6fbd9bd1-ccd4-4e2f-a918-a0f871965763
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  servername: st33614.rumedia-cdn.com
   network: ws
   ws-opts:
-    path: /@Marisa_kristi
+    path: /cdn/v3/live
     headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
-- name: 🇸🇪 SE 04 - xiaohe
+      Host: st33614.rumedia-cdn.com
+- name: 🇸🇪 SE 03 - xiaohe
   type: vless
   server: 77.110.97.245
   port: 443
@@ -65,7 +53,6 @@ proxy-groups:
   - 🇸🇪 SE 01 - xiaohe
   - 🇸🇪 SE 02 - xiaohe
   - 🇸🇪 SE 03 - xiaohe
-  - 🇸🇪 SE 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -74,6 +61,5 @@ proxy-groups:
   - 🇸🇪 SE 01 - xiaohe
   - 🇸🇪 SE 02 - xiaohe
   - 🇸🇪 SE 03 - xiaohe
-  - 🇸🇪 SE 04 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -18,6 +18,20 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
+- name: 🇦🇹 AT 03 - xiaohe
+  type: vless
+  server: 104.18.35.86
+  port: 443
+  uuid: 1c7f675f-5923-463f-83fb-af4c898cecea
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 0Ee6wOQz4W8W0cDqiTgq6XZ-q0o9r6o9.merTEssWAgGEr08.WoRKErs.dEv
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiZWhuWFFGNWRISXBjSmRGWSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: 0Ee6wOQz4W8W0cDqiTgq6XZ-q0o9r6o9.merTEssWAgGEr08.WoRKErs.dEv
 proxy-groups:
 - name: PROXIES
   type: select
@@ -25,6 +39,7 @@ proxy-groups:
   - AUTO
   - 🇦🇹 AT 01 - xiaohe
   - 🇦🇹 AT 02 - xiaohe
+  - 🇦🇹 AT 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -32,5 +47,6 @@ proxy-groups:
   proxies:
   - 🇦🇹 AT 01 - xiaohe
   - 🇦🇹 AT 02 - xiaohe
+  - 🇦🇹 AT 03 - xiaohe
 rules:
 - MATCH,PROXIES

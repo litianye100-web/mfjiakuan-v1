@@ -13,10 +13,10 @@ proxies:
   udp: true
 - name: 🇷🇴 RO 02 - xiaohe
   type: ss
-  server: 154.46.31.106
-  port: 443
+  server: 82.152.132.211
+  port: 8044
   cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
+  password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
   udp: true
 proxy-groups:
 - name: PROXIES

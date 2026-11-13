@@ -13,13 +13,6 @@ proxies:
   udp: true
 - name: 🇦🇹 AT 02 - xiaohe
   type: ss
-  server: 152.53.1.57
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-  udp: true
-- name: 🇦🇹 AT 03 - xiaohe
-  type: ss
   server: 82.110.60.9
   port: 19999
   cipher: aes-256-gcm
@@ -32,7 +25,6 @@ proxy-groups:
   - AUTO
   - 🇦🇹 AT 01 - xiaohe
   - 🇦🇹 AT 02 - xiaohe
-  - 🇦🇹 AT 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -40,6 +32,5 @@ proxy-groups:
   proxies:
   - 🇦🇹 AT 01 - xiaohe
   - 🇦🇹 AT 02 - xiaohe
-  - 🇦🇹 AT 03 - xiaohe
 rules:
 - MATCH,PROXIES

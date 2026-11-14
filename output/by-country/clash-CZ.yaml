@@ -18,17 +18,28 @@ proxies:
     path: /fp=chrome
     headers:
       Host: fs.qicai99.com
+- name: 🇨🇿 CZ 02 - xiaohe
+  type: vless
+  server: 194.87.109.106
+  port: 443
+  uuid: d9274255-edf4-4944-bc62-6ef35cd2de40
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: currant.asynchronous.site
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇿 CZ 01 - xiaohe
+  - 🇨🇿 CZ 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 CZ 01 - xiaohe
+  - 🇨🇿 CZ 02 - xiaohe
 rules:
 - MATCH,PROXIES

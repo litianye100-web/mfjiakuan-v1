@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇵🇱 PL 01 - xiaohe
+- name: 🇰🇿 KZ 01 - xiaohe
   type: vless
-  server: 144.31.1.172
-  port: 443
-  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
+  server: 38.107.234.57
+  port: 8443
+  uuid: 2424febb-43cb-488d-bdd1-401e923c8e48
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: harbortarget.newbuzideas.org
+  servername: 3h-kazakhstan1.09vpn.com
   network: ws
   ws-opts:
-    path: /media/ws/
+    path: /vless/
     headers:
-      Host: 144.31.1.172
+      Host: 38.107.234.57
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇵🇱 PL 01 - xiaohe
+  - 🇰🇿 KZ 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇵🇱 PL 01 - xiaohe
+  - 🇰🇿 KZ 01 - xiaohe
 rules:
 - MATCH,PROXIES
